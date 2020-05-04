@@ -20,6 +20,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: #f9f9f9;
 }
 
 .navbar {
@@ -30,6 +31,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #6886c5;
 }
 
 .navbar nav {

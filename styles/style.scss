@@ -4,6 +4,7 @@ $header3: 2.5rem;
 $header4: 2rem;
 $text: 1.5rem;
 $navbar-color: #6886c5;
+$text-color: #f9f9f9;
 
 @mixin flex($direction, $align, $justify) {
   display: flex;

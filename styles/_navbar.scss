@@ -2,11 +2,13 @@
   min-height: 10vh;
   display: flex;
   align-items: center;
+  background: $navbar-color;
 
   nav {
     width: 90%;
     margin: auto;
     @include flex(row, center, space-between);
+
     .logo {
       flex: 1 1 20rem;
       img {
@@ -14,6 +16,7 @@
         width: 8rem;
       }
     }
+
     ul {
       flex: 1 1 20rem;
       @include flex(row, center, space-evenly);
