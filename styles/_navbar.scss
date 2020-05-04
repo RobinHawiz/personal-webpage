@@ -1,0 +1,14 @@
+.navbar {
+  min-height: 10vh;
+
+  nav {
+    width: 90%;
+    margin: auto;
+    @include flex(row, center, space-between);
+
+    img {
+      height: 10rem;
+      width: 10rem;
+    }
+  }
+}
