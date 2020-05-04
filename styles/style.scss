@@ -1,0 +1,14 @@
+$header1: 4rem;
+$header2: 3rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 1.5rem;
+
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@import "global";
