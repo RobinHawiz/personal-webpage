@@ -20,8 +20,8 @@
     }
 
     ul {
-      flex: 1 1 20rem;
-      padding: 1rem;
+      flex: 1 1 40rem;
+      padding: 2rem;
       @include flex(row, center, space-evenly);
       font-size: $text;
       a {

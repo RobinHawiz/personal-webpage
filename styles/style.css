@@ -68,9 +68,9 @@ a {
 
 .navbar nav ul {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 20rem;
-          flex: 1 1 20rem;
-  padding: 1rem;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,7 +111,7 @@ a {
   color: #6886c5;
 }
 
-@media screen and (max-width: 559px) {
+@media screen and (max-width: 693px) {
   .navbar nav .logo {
     display: -webkit-box;
     display: -ms-flexbox;
