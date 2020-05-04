@@ -89,9 +89,23 @@ a {
 
 .navbar nav ul a {
   padding: 1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.navbar nav ul a:hover {
+.navbar nav ul .active {
+  border-radius: 2rem;
+  background: #f9f9f9;
+  color: #6886c5;
+}
+
+.navbar nav ul .active:hover {
+  border-radius: 0rem;
+  background: #6886c5;
+  color: #f9f9f9;
+}
+
+.navbar nav ul .not-active:hover {
   border-radius: 2rem;
   background: #f9f9f9;
   color: #6886c5;

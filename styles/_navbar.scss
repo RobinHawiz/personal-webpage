@@ -26,6 +26,19 @@
       font-size: $text;
       a {
         padding: 1rem;
+        transition: 0.5s;
+      }
+      .active {
+        border-radius: 2rem;
+        background: $text-color;
+        color: $navbar-color;
+        &:hover {
+          border-radius: 0rem;
+          background: $navbar-color;
+          color: $text-color;
+        }
+      }
+      .not-active {
         &:hover {
           border-radius: 2rem;
           background: $text-color;
