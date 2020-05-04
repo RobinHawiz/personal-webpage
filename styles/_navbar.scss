@@ -8,9 +8,11 @@
     width: 90%;
     margin: auto;
     @include flex(row, center, space-between);
+    flex-wrap: wrap;
 
     .logo {
       flex: 1 1 20rem;
+      padding: 1rem;
       img {
         height: 8rem;
         width: 8rem;
@@ -19,8 +21,17 @@
 
     ul {
       flex: 1 1 20rem;
+      padding: 1rem;
       @include flex(row, center, space-evenly);
       font-size: $text;
+      a {
+        padding: 1rem;
+        &:hover {
+          border-radius: 2rem;
+          background: $text-color;
+          color: $navbar-color;
+        }
+      }
     }
   }
 }

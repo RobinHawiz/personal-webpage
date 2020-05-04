@@ -2,7 +2,7 @@ $header1: 4rem;
 $header2: 3rem;
 $header3: 2.5rem;
 $header4: 2rem;
-$text: 1.5rem;
+$text: 2rem;
 $navbar-color: #6886c5;
 $text-color: #f9f9f9;
 
@@ -15,3 +15,21 @@ $text-color: #f9f9f9;
 
 @import "global";
 @import "navbar";
+
+@media screen and (max-width: 559px) {
+  .navbar {
+    nav {
+      .logo {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 5rem;
+          height: 5rem;
+        }
+      }
+      ul {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
