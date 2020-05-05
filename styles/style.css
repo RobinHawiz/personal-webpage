@@ -133,6 +133,7 @@ h4 {
 
 #home {
   min-height: 90vh;
+  position: relative;
 }
 
 #home .introduction {
@@ -214,6 +215,22 @@ h4 {
 #home .info .info-image-container .info-images svg {
   width: 100%;
   height: auto;
+}
+
+#home::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #ffacb7;
+  height: 50%;
+}
+
+#home::after {
+  top: -15%;
+  z-index: -1;
+  -webkit-transform: skewY(-10deg);
+          transform: skewY(-10deg);
 }
 
 @media screen and (max-width: 693px) {

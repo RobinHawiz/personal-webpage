@@ -1,5 +1,6 @@
 #home {
   min-height: 90vh;
+  position: relative;
   .introduction {
     width: 90%;
     margin: auto;
@@ -39,5 +40,18 @@
         }
       }
     }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #ffacb7;
+    height: 50%;
+  }
+  &::after {
+    top: -15%;
+    z-index: -1;
+    transform: skewY(-10deg);
   }
 }
