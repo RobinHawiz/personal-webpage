@@ -10,6 +10,7 @@
     .introduction {
       width: 90%;
       margin: auto;
+      padding-top: 2rem;
       @include flex(row, center, none);
       min-height: 30vh;
       .image-container {
