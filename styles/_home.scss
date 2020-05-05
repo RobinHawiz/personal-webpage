@@ -1,0 +1,14 @@
+#home {
+  min-height: 90vh;
+  .introduction {
+    .image-container {
+      border-radius: 2rem;
+      height: 10rem;
+      width: 10rem;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -111,6 +111,21 @@ a {
   color: #6886c5;
 }
 
+#home {
+  min-height: 90vh;
+}
+
+#home .introduction .image-container {
+  border-radius: 2rem;
+  height: 10rem;
+  width: 10rem;
+}
+
+#home .introduction .image-container img {
+  height: 100%;
+  width: 100%;
+}
+
 @media screen and (max-width: 693px) {
   .navbar nav .logo {
     display: -webkit-box;
