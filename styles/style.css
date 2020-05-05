@@ -23,6 +23,26 @@ a {
   color: #f9f9f9;
 }
 
+p {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
 .navbar {
   min-height: 10vh;
   display: -webkit-box;
