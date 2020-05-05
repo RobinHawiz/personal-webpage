@@ -133,10 +133,16 @@ h4 {
 
 #home {
   min-height: 90vh;
+  overflow: hidden;
   position: relative;
+  color: #f9f9f9;
 }
 
-#home .introduction {
+#home .introduction-wrapper {
+  background: #ffacb7;
+}
+
+#home .introduction-wrapper .introduction {
   width: 90%;
   margin: auto;
   display: -webkit-box;
@@ -155,22 +161,38 @@ h4 {
   min-height: 30vh;
 }
 
-#home .introduction .image-container {
-  border-radius: 2rem;
-  height: 10rem;
-  width: 10rem;
+#home .introduction-wrapper .introduction .image-container {
+  z-index: 1;
+  height: 20rem;
+  width: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#home .introduction .image-container img {
-  height: 100%;
+#home .introduction-wrapper .introduction .image-container img {
+  border-radius: 50%;
+  border: 0.2rem solid black;
+  height: auto;
   width: 100%;
 }
 
-#home .introduction .name-title-container {
-  padding-left: 2rem;
+#home .introduction-wrapper .introduction .name-title-container {
+  margin-left: 2rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  z-index: 1;
 }
 
-#home .info {
+#home .info-wrapper {
+  background: #ffe0ac;
+}
+
+#home .info-wrapper .info {
   width: 90%;
   margin: auto;
   min-height: 60vh;
@@ -189,12 +211,20 @@ h4 {
           justify-content: center;
 }
 
-#home .info .info-image-container {
+#home .info-wrapper .info .info-text-container {
+  z-index: 1;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+}
+
+#home .info-wrapper .info .info-image-container {
+  z-index: 1;
   height: 60vh;
   overflow: hidden;
 }
 
-#home .info .info-image-container .info-images {
+#home .info-wrapper .info .info-image-container .info-images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,7 +242,7 @@ h4 {
   height: 100%;
 }
 
-#home .info .info-image-container .info-images svg {
+#home .info-wrapper .info .info-image-container .info-images svg {
   width: 100%;
   height: auto;
 }
@@ -223,12 +253,26 @@ h4 {
   left: 0;
   right: 0;
   background: #ffacb7;
-  height: 50%;
+  height: 100%;
 }
 
 #home::after {
-  top: -15%;
-  z-index: -1;
+  top: -66%;
+  -webkit-transform: skewY(-10deg);
+          transform: skewY(-10deg);
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #ffe0ac;
+  height: 100%;
+}
+
+#home::before {
+  top: 34%;
   -webkit-transform: skewY(-10deg);
           transform: skewY(-10deg);
 }
