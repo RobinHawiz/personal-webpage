@@ -17,6 +17,25 @@ $text-color: #f9f9f9;
 @import "navbar";
 @import "home";
 
+@media screen and (max-width: 1672px) {
+  /* HOME SECTION */
+  #home {
+    .info-wrapper {
+      .info {
+        .info-text-border {
+          .info-text-container {
+            margin-top: 7vw;
+          }
+        }
+        .info-image-container {
+          padding-top: 5rem;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 787px) {
   /* GLOBALS */
 
@@ -47,29 +66,6 @@ $text-color: #f9f9f9;
       }
       ul {
         font-size: 1.5rem;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  /* HOME SECTION */
-  #home {
-    min-height: 90vh;
-    overflow: hidden;
-    position: relative;
-    color: $text-color;
-
-    .introduction-wrapper {
-      .introduction {
-        .name-title-container {
-        }
-      }
-    }
-    .info-wrapper {
-      .info {
-        .info-text-container {
-        }
       }
     }
   }
