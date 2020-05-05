@@ -17,7 +17,24 @@ $text-color: #f9f9f9;
 @import "navbar";
 @import "home";
 
-@media screen and (max-width: 693px) {
+@media screen and (max-width: 787px) {
+  /* GLOBALS */
+
+  h1 {
+    font-size: $header2;
+  }
+  h2 {
+    font-size: $header3;
+  }
+  h3 {
+    font-size: $header4;
+  }
+  p {
+    font-size: $header4;
+  }
+
+  /* NAVBAR*/
+
   .navbar {
     nav {
       .logo {
@@ -30,6 +47,29 @@ $text-color: #f9f9f9;
       }
       ul {
         font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* HOME SECTION */
+  #home {
+    min-height: 90vh;
+    overflow: hidden;
+    position: relative;
+    color: $text-color;
+
+    .introduction-wrapper {
+      .introduction {
+        .name-title-container {
+        }
+      }
+    }
+    .info-wrapper {
+      .info {
+        .info-text-container {
+        }
       }
     }
   }

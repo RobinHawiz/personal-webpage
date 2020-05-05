@@ -10,7 +10,7 @@
     .introduction {
       width: 90%;
       margin: auto;
-      padding-top: 2rem;
+      padding: 5rem 0rem;
       @include flex(row, center, none);
       min-height: 30vh;
       .image-container {
@@ -32,6 +32,10 @@
         background: rgba(0, 0, 0, 0.5);
         border-radius: 2rem;
         z-index: 1;
+
+        h2 {
+          padding-bottom: 1rem;
+        }
       }
     }
   }
