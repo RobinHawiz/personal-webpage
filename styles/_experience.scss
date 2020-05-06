@@ -11,15 +11,68 @@
       @include flex(column, center, space-evenly);
       text-align: center;
       height: 100%;
+
+      .box-pointing-right {
+        border: 0.4rem solid #ffe0ac;
+        padding: 2rem;
+        border-radius: 2rem;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          border-top: 0.4rem solid #ffe0ac;
+          border-right: 0.4rem solid #ffe0ac;
+          background: #ffacb7;
+          content: "";
+          height: 3rem;
+          width: 3rem;
+          left: 100%;
+          top: 50%;
+          transform: translate(-42%, -50%) rotate(45deg);
+        }
+      }
+
+      .years {
+        border: 0.4rem solid #ffe0ac;
+        padding: 2rem;
+        border-radius: 2rem;
+      }
     }
     .line {
       border-left: 0.6rem solid #ffe0ac;
+      margin: 0rem 4rem;
       height: 100%;
     }
     .timeline-right {
       @include flex(column, center, space-evenly);
       text-align: center;
       height: 100%;
+
+      .box-pointing-left {
+        border: 0.4rem solid #ffe0ac;
+        padding: 2rem;
+        border-radius: 2rem;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          border-bottom: 0.4rem solid #ffe0ac;
+          border-left: 0.4rem solid #ffe0ac;
+          background: #ffacb7;
+          content: "";
+          height: 3rem;
+          width: 3rem;
+          left: 0%;
+          top: 50%;
+          transform: translate(-58%, -50%) rotate(45deg);
+        }
+      }
+
+      .years {
+        border: 0.4rem solid #ffe0ac;
+        padding: 2rem;
+        border-radius: 2rem;
+      }
     }
   }
 }
