@@ -68,6 +68,7 @@ $text-color: #f9f9f9;
       }
       ul {
         font-size: 1.5rem;
+        padding: 2rem 0rem;
       }
     }
   }
@@ -84,5 +85,84 @@ $text-color: #f9f9f9;
   }
   p {
     font-size: 1.5rem;
+  }
+
+  /* EXPERIENCE SECTION*/
+
+  #timeline {
+    .timeline-wrapper {
+      .timeline-left {
+        .box-pointing-right {
+          border: 0.2rem solid #ffe0ac;
+          padding: 1rem;
+
+          &::after {
+            border-top: 0.2rem solid #ffe0ac;
+            border-right: 0.2rem solid #ffe0ac;
+            height: 1.5rem;
+            width: 1.5rem;
+          }
+
+          h3 {
+            font-size: 1.3rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+
+        .years {
+          border: 0.2rem solid #ffe0ac;
+          padding: 1rem;
+
+          h3 {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      .circled-line {
+        .line {
+          border: 0.2rem solid #ffe0ac;
+        }
+        .circle {
+          height: 2.5rem;
+          width: 2.5rem;
+          border-radius: 2.5rem;
+          border: 0.2rem solid #ffe0ac;
+        }
+      }
+
+      .timeline-right {
+        .box-pointing-left {
+          border: 0.2rem solid #ffe0ac;
+          padding: 1rem;
+
+          &::after {
+            border-bottom: 0.2rem solid #ffe0ac;
+            border-left: 0.2rem solid #ffe0ac;
+            height: 1.5rem;
+            width: 1.5rem;
+          }
+
+          h3 {
+            font-size: 1.3rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+
+        .years {
+          border: 0.2rem solid #ffe0ac;
+          padding: 1rem;
+          h3 {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
   }
 }
