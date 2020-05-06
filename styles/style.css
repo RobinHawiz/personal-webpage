@@ -331,6 +331,11 @@ h4 {
     font-size: 2rem;
   }
   /* NAVBAR*/
+  .navbar nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .navbar nav .logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -344,6 +349,19 @@ h4 {
     height: 5rem;
   }
   .navbar nav ul {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* GLOBALS */
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
     font-size: 1.5rem;
   }
 }
