@@ -6,6 +6,7 @@
   .timeline-wrapper {
     @include flex(row, center, center);
     height: 45vh;
+    min-height: 50rem;
 
     .timeline-left {
       @include flex(column, center, space-evenly);
@@ -38,15 +39,32 @@
         border-radius: 2rem;
       }
     }
-    .line {
-      border-left: 0.6rem solid #ffe0ac;
-      margin: 0rem 4rem;
+    .circled-line {
       height: 100%;
+      margin: 0rem 4rem;
+      position: relative;
+      @include flex(column, center, space-evenly);
+      .line {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 0.1rem solid #ffe0ac;
+        height: 100%;
+      }
+      .circle {
+        height: 3.5rem;
+        width: 3.5rem;
+        margin: 2rem 0rem;
+        border-radius: 3.5rem;
+        border: 0.1rem solid #ffe0ac;
+        background: #ffacb7;
+        z-index: 1;
+      }
     }
     .timeline-right {
       @include flex(column, center, space-evenly);
       text-align: center;
-      height: 100%;
+      height: 92%;
 
       .box-pointing-left {
         border: 0.4rem solid #ffe0ac;

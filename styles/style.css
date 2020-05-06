@@ -375,6 +375,7 @@ h4 {
       -ms-flex-pack: center;
           justify-content: center;
   height: 45vh;
+  min-height: 50rem;
 }
 
 #timeline .timeline-wrapper .timeline-left {
@@ -422,10 +423,42 @@ h4 {
   border-radius: 2rem;
 }
 
-#timeline .timeline-wrapper .line {
-  border-left: 0.6rem solid #ffe0ac;
-  margin: 0rem 4rem;
+#timeline .timeline-wrapper .circled-line {
   height: 100%;
+  margin: 0rem 4rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#timeline .timeline-wrapper .circled-line .line {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 0.1rem solid #ffe0ac;
+  height: 100%;
+}
+
+#timeline .timeline-wrapper .circled-line .circle {
+  height: 3.5rem;
+  width: 3.5rem;
+  margin: 2rem 0rem;
+  border-radius: 3.5rem;
+  border: 0.1rem solid #ffe0ac;
+  background: #ffacb7;
+  z-index: 1;
 }
 
 #timeline .timeline-wrapper .timeline-right {
@@ -443,7 +476,7 @@ h4 {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   text-align: center;
-  height: 100%;
+  height: 92%;
 }
 
 #timeline .timeline-wrapper .timeline-right .box-pointing-left {
