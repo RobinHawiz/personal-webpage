@@ -506,6 +506,24 @@ h4 {
   border-radius: 2rem;
 }
 
+svg {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  z-index: 2;
+}
+
+svg circle {
+  width: 100%;
+  height: 100%;
+  stroke: #191919;
+  stroke-width: 10;
+  stroke-linecap: round;
+  fill: none;
+  -webkit-transform: translate(0.5rem, 0.5rem);
+          transform: translate(0.5rem, 0.5rem);
+}
+
 @media screen and (max-width: 1672px) {
   /* HOME SECTION */
   #home .info-wrapper .info .info-text-border .info-text-container {

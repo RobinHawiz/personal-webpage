@@ -1,0 +1,16 @@
+svg {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  z-index: 2;
+
+  circle {
+    width: 100%;
+    height: 100%;
+    stroke: #191919;
+    stroke-width: 10;
+    stroke-linecap: round;
+    fill: none;
+    transform: translate(0.5rem, 0.5rem);
+  }
+}
