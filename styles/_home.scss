@@ -102,3 +102,22 @@
     transform: skewY(-10deg);
   }
 }
+
+#floating-object1 {
+  animation: floatingBoxes 2.5s ease-in-out infinite alternate;
+}
+#floating-object2 {
+  animation: floatingBoxes 2s ease-in-out infinite alternate;
+}
+#floating-object3 {
+  animation: floatingBoxes 2.3s ease-in-out infinite alternate;
+}
+
+@keyframes floatingBoxes {
+  from {
+    transform: translateY(6%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}

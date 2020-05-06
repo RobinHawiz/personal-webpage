@@ -305,6 +305,43 @@ h4 {
           transform: skewY(-10deg);
 }
 
+#floating-object1 {
+  -webkit-animation: floatingBoxes 2.5s ease-in-out infinite alternate;
+          animation: floatingBoxes 2.5s ease-in-out infinite alternate;
+}
+
+#floating-object2 {
+  -webkit-animation: floatingBoxes 2s ease-in-out infinite alternate;
+          animation: floatingBoxes 2s ease-in-out infinite alternate;
+}
+
+#floating-object3 {
+  -webkit-animation: floatingBoxes 2.3s ease-in-out infinite alternate;
+          animation: floatingBoxes 2.3s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes floatingBoxes {
+  from {
+    -webkit-transform: translateY(6%);
+            transform: translateY(6%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes floatingBoxes {
+  from {
+    -webkit-transform: translateY(6%);
+            transform: translateY(6%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
 @media screen and (max-width: 1672px) {
   /* HOME SECTION */
   #home .info-wrapper .info .info-text-border .info-text-container {
