@@ -541,18 +541,6 @@ h4 {
       justify-content: space-around;
 }
 
-#stats .stats-wrapper .card1 .box .percent svg circle:nth-child(2) {
-  stroke: violet;
-}
-
-#stats .stats-wrapper .card2 .box .percent svg circle:nth-child(2) {
-  stroke: purple;
-}
-
-#stats .stats-wrapper .card3 .box .percent svg circle:nth-child(2) {
-  stroke: peru;
-}
-
 #stats .stats-wrapper .card {
   position: relative;
   width: 25rem;
@@ -575,6 +563,7 @@ h4 {
   text-align: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  overflow: hidden;
 }
 
 #stats .stats-wrapper .card:hover {
@@ -583,6 +572,85 @@ h4 {
   -webkit-box-shadow: 0rem 1.5rem 3.5rem rgba(0, 0, 0, 0.5);
           box-shadow: 0rem 1.5rem 3.5rem rgba(0, 0, 0, 0.5);
   z-index: 2;
+}
+
+#stats .stats-wrapper .card:hover .box .percent .number h2 {
+  color: #fff;
+  font-size: 4rem;
+}
+
+#stats .stats-wrapper .card:hover .box .percent .number h2 span {
+  color: #fff;
+}
+
+#stats .stats-wrapper .card:hover .box .text {
+  color: #fff;
+}
+
+#stats .stats-wrapper .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+#stats .stats-wrapper .card .box .text {
+  position: relative;
+  color: #777;
+  margin-top: 2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#stats .stats-wrapper .card .box .percent {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 0 5rem #000;
+          box-shadow: inset 0 0 5rem #000;
+  background: #222;
+}
+
+#stats .stats-wrapper .card .box .percent .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+}
+
+#stats .stats-wrapper .card .box .percent .number h2 {
+  color: #777;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#stats .stats-wrapper .card .box .percent .number h2 span {
+  font-size: 2.4rem;
+  color: #777;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #stats .stats-wrapper .card .box .percent svg {
@@ -602,8 +670,62 @@ h4 {
 }
 
 #stats .stats-wrapper .card .box .percent svg circle:nth-child(2) {
-  stroke-dasharray: 220;
-  stroke-dashoffset: 220;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+#stats .stats-wrapper .card1 .box .percent svg circle:nth-child(2) {
+  -webkit-animation: circleAnimation1 5s ease 0s forwards;
+          animation: circleAnimation1 5s ease 0s forwards;
+  stroke: violet;
+}
+
+#stats .stats-wrapper .card2 .box .percent svg circle:nth-child(2) {
+  -webkit-animation: circleAnimation2;
+          animation: circleAnimation2;
+  stroke: purple;
+}
+
+#stats .stats-wrapper .card3 .box .percent svg circle:nth-child(2) {
+  -webkit-animation: circleAnimation3;
+          animation: circleAnimation3;
+  stroke: peru;
+}
+
+@-webkit-keyframes circleAnimation1 {
+  to {
+    stroke-dashoffset: calc(440 - (440 * 0.9));
+  }
+}
+
+@keyframes circleAnimation1 {
+  to {
+    stroke-dashoffset: calc(440 - (440 * 0.9));
+  }
+}
+
+@-webkit-keyframes circleAnimation2 {
+  to {
+    stroke-dashoffset: calc(440 - 440 * 0.6);
+  }
+}
+
+@keyframes circleAnimation2 {
+  to {
+    stroke-dashoffset: calc(440 - 440 * 0.6);
+  }
+}
+
+@-webkit-keyframes circleAnimation3 {
+  to {
+    stroke-dashoffset: calc(440 - 440 * 0.8);
+  }
+}
+
+@keyframes circleAnimation3 {
+  to {
+    stroke-dashoffset: calc(440 - 440 * 0.8);
+  }
 }
 
 @media screen and (max-width: 1672px) {

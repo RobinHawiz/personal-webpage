@@ -6,15 +6,6 @@
     position: relative;
     width: 70%;
     @include flex(row, none, space-around);
-    .card1 .box .percent svg circle:nth-child(2) {
-      stroke: violet;
-    }
-    .card2 .box .percent svg circle:nth-child(2) {
-      stroke: purple;
-    }
-    .card3 .box .percent svg circle:nth-child(2) {
-      stroke: peru;
-    }
     .card {
       position: relative;
       width: 25rem;
@@ -23,14 +14,70 @@
       @include flex(row, center, center);
       text-align: center;
       transition: 0.5s;
+      overflow: hidden;
 
       &:hover {
         transform: translateY(-5%);
         box-shadow: 0rem 1.5rem 3.5rem rgba(0, 0, 0, $alpha: 0.5);
         z-index: 2;
       }
+      &:hover .box .percent .number h2 {
+        color: #fff;
+        font-size: 4rem;
+      }
+      &:hover .box .percent .number h2 span {
+        color: #fff;
+      }
+      &:hover .box .text {
+        color: #fff;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.03);
+      }
       .box {
+        .text {
+          position: relative;
+          color: #777;
+          margin-top: 2rem;
+          letter-spacing: 0.1rem;
+          text-transform: uppercase;
+          font-size: 1.8rem;
+          transition: 0.5s;
+        }
         .percent {
+          position: relative;
+          width: 15rem;
+          height: 15rem;
+          border-radius: 50%;
+          box-shadow: inset 0 0 5rem #000;
+          background: #222;
+
+          .number {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @include flex(row, center, center);
+            border-radius: 50%;
+
+            h2 {
+              color: #777;
+              transition: 0.5s;
+
+              span {
+                font-size: 2.4rem;
+                color: #777;
+                transition: 0.5s;
+              }
+            }
+          }
           svg {
             position: relative;
             width: 15rem;
@@ -46,13 +93,41 @@
               fill: none;
 
               &:nth-child(2) {
-                stroke-dasharray: 220;
-                stroke-dashoffset: 220;
+                stroke-dasharray: 440;
+                stroke-dashoffset: 440;
               }
             }
           }
         }
       }
     }
+    .card1 .box .percent svg circle:nth-child(2) {
+      animation: circleAnimation1 5s ease 0s forwards;
+      stroke: violet;
+    }
+    .card2 .box .percent svg circle:nth-child(2) {
+      animation: circleAnimation2;
+      stroke: purple;
+    }
+    .card3 .box .percent svg circle:nth-child(2) {
+      animation: circleAnimation3;
+      stroke: peru;
+    }
+  }
+}
+
+@keyframes circleAnimation1 {
+  to {
+    stroke-dashoffset: calc(440 - (440 * 0.9));
+  }
+}
+@keyframes circleAnimation2 {
+  to {
+    stroke-dashoffset: calc(440 - 440 * 0.6);
+  }
+}
+@keyframes circleAnimation3 {
+  to {
+    stroke-dashoffset: calc(440 - 440 * 0.8);
   }
 }
