@@ -1,0 +1,55 @@
+#journey {
+  background: #ffe0ac;
+  min-height: 90vh;
+  @include flex(row, center, center);
+  .journey-wrapper {
+    background: #86765b;
+    height: 50rem;
+    @include flex(column, center, center);
+    border-radius: 2rem;
+    color: $text-color;
+    form {
+      height: 100%;
+      width: 60vmin;
+      min-width: 30rem;
+      box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.5);
+      border-radius: 2rem;
+      @include flex(column, none, space-between);
+      h2 {
+        margin-top: 4rem;
+        text-align: center;
+      }
+      .name {
+        display: flex;
+        @include flex(row, center, center);
+      }
+      .email {
+        display: flex;
+        @include flex(row, center, center);
+      }
+      .gender {
+        text-align: center;
+
+        select {
+          width: 100%;
+          font-size: 2vmin;
+          option {
+          }
+        }
+      }
+      label {
+        font-size: 2vmin;
+      }
+      input {
+        font-size: 2vmin;
+      }
+      .submit {
+        border: none;
+        padding: 2rem 0rem;
+        border-bottom-left-radius: 1.8rem;
+        border-bottom-right-radius: 1.8rem;
+        background: #ffe0ac;
+      }
+    }
+  }
+}
