@@ -539,6 +539,8 @@ h4 {
           align-items: none;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #stats .stats-wrapper .card {
@@ -677,54 +679,54 @@ h4 {
 #stats .stats-wrapper .card1 .box .percent svg circle:nth-child(2) {
   -webkit-animation: circleAnimation1 5s ease 0s forwards;
           animation: circleAnimation1 5s ease 0s forwards;
-  stroke: violet;
+  stroke: #ffe0ac;
 }
 
 #stats .stats-wrapper .card2 .box .percent svg circle:nth-child(2) {
-  -webkit-animation: circleAnimation2;
-          animation: circleAnimation2;
-  stroke: purple;
+  -webkit-animation: circleAnimation2 3s ease 0s forwards;
+          animation: circleAnimation2 3s ease 0s forwards;
+  stroke: #ffacb7;
 }
 
 #stats .stats-wrapper .card3 .box .percent svg circle:nth-child(2) {
-  -webkit-animation: circleAnimation3;
-          animation: circleAnimation3;
-  stroke: peru;
+  -webkit-animation: circleAnimation3 4.5s ease 0s forwards;
+          animation: circleAnimation3 4.5s ease 0s forwards;
+  stroke: #6886c5;
 }
 
 @-webkit-keyframes circleAnimation1 {
   to {
-    stroke-dashoffset: calc(440 - (440 * 0.9));
+    stroke-dashoffset: 44;
   }
 }
 
 @keyframes circleAnimation1 {
   to {
-    stroke-dashoffset: calc(440 - (440 * 0.9));
+    stroke-dashoffset: 44;
   }
 }
 
 @-webkit-keyframes circleAnimation2 {
   to {
-    stroke-dashoffset: calc(440 - 440 * 0.6);
+    stroke-dashoffset: 176;
   }
 }
 
 @keyframes circleAnimation2 {
   to {
-    stroke-dashoffset: calc(440 - 440 * 0.6);
+    stroke-dashoffset: 176;
   }
 }
 
 @-webkit-keyframes circleAnimation3 {
   to {
-    stroke-dashoffset: calc(440 - 440 * 0.8);
+    stroke-dashoffset: 88;
   }
 }
 
 @keyframes circleAnimation3 {
   to {
-    stroke-dashoffset: calc(440 - 440 * 0.8);
+    stroke-dashoffset: 88;
   }
 }
 

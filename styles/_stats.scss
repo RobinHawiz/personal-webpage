@@ -6,10 +6,12 @@
     position: relative;
     width: 70%;
     @include flex(row, none, space-around);
+    flex-wrap: wrap;
     .card {
       position: relative;
       width: 25rem;
       height: 30rem;
+
       background: linear-gradient(#1b1b1b, #222, #1b1b1b);
       @include flex(row, center, center);
       text-align: center;
@@ -103,31 +105,31 @@
     }
     .card1 .box .percent svg circle:nth-child(2) {
       animation: circleAnimation1 5s ease 0s forwards;
-      stroke: violet;
+      stroke: #ffe0ac;
     }
     .card2 .box .percent svg circle:nth-child(2) {
-      animation: circleAnimation2;
-      stroke: purple;
+      animation: circleAnimation2 3s ease 0s forwards;
+      stroke: #ffacb7;
     }
     .card3 .box .percent svg circle:nth-child(2) {
-      animation: circleAnimation3;
-      stroke: peru;
+      animation: circleAnimation3 4.5s ease 0s forwards;
+      stroke: #6886c5;
     }
   }
 }
 
 @keyframes circleAnimation1 {
   to {
-    stroke-dashoffset: calc(440 - (440 * 0.9));
+    stroke-dashoffset: 44;
   }
 }
 @keyframes circleAnimation2 {
   to {
-    stroke-dashoffset: calc(440 - 440 * 0.6);
+    stroke-dashoffset: 176;
   }
 }
 @keyframes circleAnimation3 {
   to {
-    stroke-dashoffset: calc(440 - 440 * 0.8);
+    stroke-dashoffset: 88;
   }
 }
