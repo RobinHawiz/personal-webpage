@@ -1,0 +1,96 @@
+#timeline {
+  min-height: 90vh;
+  background: #ffacb7;
+  @include flex(row, center, center);
+
+  .timeline-wrapper {
+    @include flex(row, center, center);
+    height: 45vh;
+    min-height: 50rem;
+
+    .timeline-left {
+      @include flex(column, center, space-evenly);
+      text-align: center;
+      height: 100%;
+
+      .box-pointing-right {
+        border: 0.4rem solid #ffe0ac;
+        padding: 2rem;
+        border-radius: 2rem;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          border-top: 0.4rem solid #ffe0ac;
+          border-right: 0.4rem solid #ffe0ac;
+          background: #ffacb7;
+          content: "";
+          height: 3rem;
+          width: 3rem;
+          left: 100%;
+          top: 50%;
+          transform: translate(-42%, -50%) rotate(45deg);
+        }
+      }
+
+      .years {
+        border: 0.4rem solid #ffe0ac;
+        padding: 2rem;
+        border-radius: 2rem;
+      }
+    }
+    .circled-line {
+      height: 100%;
+      margin: 0rem 4rem;
+      position: relative;
+      @include flex(column, center, space-evenly);
+      .line {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 0.4rem solid #ffe0ac;
+        height: 100%;
+      }
+      .circle {
+        height: 3.5rem;
+        width: 3.5rem;
+        margin: 2rem 0rem;
+        border-radius: 3.5rem;
+        border: 0.4rem solid #ffe0ac;
+        background: #ffacb7;
+        z-index: 1;
+      }
+    }
+    .timeline-right {
+      @include flex(column, center, space-evenly);
+      text-align: center;
+      height: 92%;
+
+      .box-pointing-left {
+        border: 0.4rem solid #ffe0ac;
+        padding: 2rem;
+        border-radius: 2rem;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          border-bottom: 0.4rem solid #ffe0ac;
+          border-left: 0.4rem solid #ffe0ac;
+          background: #ffacb7;
+          content: "";
+          height: 3rem;
+          width: 3rem;
+          left: 0%;
+          top: 50%;
+          transform: translate(-58%, -50%) rotate(45deg);
+        }
+      }
+
+      .years {
+        border: 0.4rem solid #ffe0ac;
+        padding: 2rem;
+        border-radius: 2rem;
+      }
+    }
+  }
+}

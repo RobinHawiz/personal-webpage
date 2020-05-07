@@ -1,0 +1,169 @@
+$header1: 4rem;
+$header2: 3rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2.5rem;
+$navbar-color: #6886c5;
+$text-color: #f9f9f9;
+
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@import "global";
+@import "navbar";
+@import "home";
+@import "experience";
+@import "stats";
+
+@media screen and (max-width: 1672px) {
+  /* HOME SECTION */
+  #home {
+    .info-wrapper {
+      .info {
+        .info-text-border {
+          .info-text-container {
+            margin-top: 7vw;
+          }
+        }
+        .info-image-container {
+          padding-top: 5rem;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 787px) {
+  /* GLOBALS */
+
+  h1 {
+    font-size: $header2;
+  }
+  h2 {
+    font-size: $header3;
+  }
+  h3 {
+    font-size: $header4;
+  }
+  p {
+    font-size: $header4;
+  }
+
+  /* NAVBAR*/
+
+  .navbar {
+    nav {
+      justify-content: center;
+      .logo {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 5rem;
+          height: 5rem;
+        }
+      }
+      ul {
+        font-size: 1.5rem;
+        padding: 2rem 0rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* GLOBALS */
+
+  h2 {
+    font-size: $header4;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+
+  /* EXPERIENCE SECTION*/
+
+  #timeline {
+    .timeline-wrapper {
+      .timeline-left {
+        .box-pointing-right {
+          border: 0.2rem solid #ffe0ac;
+          padding: 1rem;
+
+          &::after {
+            border-top: 0.2rem solid #ffe0ac;
+            border-right: 0.2rem solid #ffe0ac;
+            height: 1.5rem;
+            width: 1.5rem;
+          }
+
+          h3 {
+            font-size: 1.3rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+
+        .years {
+          border: 0.2rem solid #ffe0ac;
+          padding: 1rem;
+
+          h3 {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      .circled-line {
+        .line {
+          border: 0.2rem solid #ffe0ac;
+        }
+        .circle {
+          height: 2.5rem;
+          width: 2.5rem;
+          border-radius: 2.5rem;
+          border: 0.2rem solid #ffe0ac;
+        }
+      }
+
+      .timeline-right {
+        .box-pointing-left {
+          border: 0.2rem solid #ffe0ac;
+          padding: 1rem;
+
+          &::after {
+            border-bottom: 0.2rem solid #ffe0ac;
+            border-left: 0.2rem solid #ffe0ac;
+            height: 1.5rem;
+            width: 1.5rem;
+          }
+
+          h3 {
+            font-size: 1.3rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+
+        .years {
+          border: 0.2rem solid #ffe0ac;
+          padding: 1rem;
+          h3 {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
